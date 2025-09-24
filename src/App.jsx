@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-export default function App() {
+function App() {
   const [boards, setBoards] = useState(
     Array(9)
       .fill(null)
@@ -145,3 +145,4 @@ function Rules({ onStart }) {
     </div>
   );
 }
+export default App;
