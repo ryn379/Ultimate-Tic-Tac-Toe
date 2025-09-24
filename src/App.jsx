@@ -39,8 +39,6 @@ export default function App() {
     }
     setIsXNext(!isXNext);
     setActiveBoard(newBoard[cindex] ? null : cindex);
-    console.log(newBoards);
-    console.log(newBoard);
   };
   const winCheck = (board) => {
     if (board[0] && board[0] === board[1] && board[0] === board[2]) {
