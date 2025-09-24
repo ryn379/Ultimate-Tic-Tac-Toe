@@ -127,3 +127,54 @@
   box-shadow: 0 0 15px 5px #226fffb3;
   transition: box-shadow 0.5s ease-in-out;
 }
+/* Rules Page Styles (all in vw) */
+.rules-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vw;
+  background: linear-gradient(135deg, #44beff, #01bfd4);
+  color: white;
+  text-align: center;
+  padding: 2vw;
+  border-radius: 10px;
+}
+
+.rules-page h1 {
+  font-size: 4vw;
+  margin-bottom: 2vw;
+  text-shadow: 0.4vw 0.4vw 1vw rgba(0, 0, 0, 0.5);
+}
+
+.rules-page ul {
+  list-style-type: disc;
+  text-align: left;
+  max-width: 50vw;
+  margin-bottom: 3vw;
+  line-height: 1.8;
+  padding-left: 2vw;
+}
+
+.rules-page li {
+  margin-bottom: 1.2vw;
+  font-size: 1.5vw;
+}
+
+.rules-page button {
+  background: #ffcc00;
+  color: #222;
+  font-weight: bold;
+  padding: 1vw 3vw;
+  font-size: 1.5vw;
+  border: none;
+  border-radius: 1.5vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0.4vw 0.4vw 1vw rgba(0, 0, 0, 0.3);
+}
+
+.rules-page button:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+}

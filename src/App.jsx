@@ -69,6 +69,10 @@ export default function App() {
     }
     return false;
   };
+  const [showRules, setShowRules] = useState(true);
+  if (showRules) {
+    return <Rules onStart={() => setShowRules(false)} />;
+  }
   return (
     <div className="board">
       <span className="big-vertical first"></span>
@@ -124,4 +128,22 @@ function Tic({ squares, onClick, isActive, winner }) {
       </div>
     );
   }
+}
+function Rules({ onStart }) {
+  return (
+    <div className="rules-page">
+      <h1>Ultimate Tic-Tac-Toe Rules</h1>
+      <ul>
+        <li>The game is played on 9 tic-tac-toe boards.</li>
+        <li>Players take turns playing in a small board.</li>
+        <li>
+          The board you play in dictates the board for your opponent's next
+          turn.
+        </li>
+        <li>Winning a small board contributes to the ultimate game.</li>
+        <li>First to get three in a row in the big board wins!</li>
+      </ul>
+      <button onClick={onStart}>Start Game</button>
+    </div>
+  );
 }
