@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/<Ultimate-Tic-Tac-Toe>/", // <-- add this
+  base: "/Ultimate-Tic-Tac-Toe/", // no angle brackets
 });
