@@ -1,0 +1,129 @@
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  background-color: rgb(56, 49, 49);
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 25vw);
+  grid-template-rows: repeat(3, 18vw);
+}
+.board::before,
+.board::after {
+  content: "";
+  position: absolute;
+  width: 75vw;
+  height: 0.4rem;
+  background-color: rgb(135, 255, 253);
+  left: 10%;
+}
+.board::before {
+  top: 33%;
+}
+.board::after {
+  top: 65%;
+}
+.board span.big-vertical {
+  position: absolute;
+  width: 0.4rem;
+  height: 100%;
+  background-color: rgb(135, 255, 253);
+  top: 0;
+}
+.board span.big-vertical.first {
+  left: 32%;
+}
+.board span.big-vertical.second {
+  left: 57%;
+}
+.horizontal-line1 {
+  width: 80vw;
+  height: 0.5vw;
+  border: 2px solid black;
+  background-color: black;
+}
+.tic-container {
+  width: 15vw;
+  height: 15vw;
+  position: relative;
+}
+.horizontal {
+  position: absolute;
+  height: 0.2rem;
+  width: 100%;
+  background-color: rgb(255, 146, 146);
+}
+
+.horizontal:nth-child(1) {
+  top: 33%;
+}
+.horizontal:nth-child(2) {
+  top: 66%;
+}
+.horizontal-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  flex-direction: column;
+}
+.vertical-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+.vertical {
+  position: absolute;
+  width: 0.2rem;
+  height: 100%;
+  background-color: rgb(255, 125, 125);
+}
+
+.vertical:nth-child(1) {
+  left: 33%;
+  top: 5%;
+}
+.vertical:nth-child(2) {
+  left: 66%;
+  top: 5%;
+}
+.squares {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  gap: 1.5vw;
+}
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+}
+.tic-container-won {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 50%;
+}
+.tic-container-won p {
+  width: 65%;
+  height: 60%;
+  font-size: 12vw;
+  color: white;
+  margin-top: 5.5vw;
+  text-shadow: 0.5vw 0.5vw 0.5vw black;
+}
+.tic-container.active {
+  box-shadow: 0 0 15px 5px #226fffb3;
+  transition: box-shadow 0.5s ease-in-out;
+}
